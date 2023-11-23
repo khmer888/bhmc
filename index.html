@@ -1,256 +1,166 @@
 <!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>北京健康管理中心</title>
+<style>
+* {
+  box-sizing: border-box;
+}
+ 
+body {
+  font-family: Arial;
+  padding: 10px;
+  background: #F5F5DC;
+}
+ 
+/* 头部标题 */
+.header {
+  padding: 30px;
+  text-align: center;
+  background: white;
+}
+ 
+.header h1 {
+  font-size: 50px;
+}
+ 
+/* 导航条 */
+.topnav {
+  overflow: hidden;
+  background-color: #F08080;
+}
+ 
+/* 导航条链接 */
+.topnav a {
+  float: left;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+ 
+/* 链接颜色修改 */
+.topnav a:hover {
+  background-color: #F5F5DC;
+  color: black;
+}
+ 
+/* 创建两列 */
+/* Left column */
+.leftcolumn {   
+  float: left;
+  width: 75%;
+}
+ 
+/* 右侧栏 */
+.rightcolumn {
+  float: left;
+  width: 25%;
+  background-color: #f1f1f1;
+  padding-left: 20px;
+}
+ 
+/* 图像部分 */
+.fakeimg {
+  background-color: #aaa;
+  width: 100%;
+  padding: 20px;
+}
+ 
+/* 文章卡片效果 */
+.card {
+  background-color: white;
+  padding: 20px;
+  margin-top: 20px;
+}
+ 
+/* 列后面清除浮动 */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+ 
+/* 底部 */
+.footer {
+  padding: 20px;
+  text-align: center;
+  background: #F08080;
+  margin-top: 20px;
+}
+ 
+/* 响应式布局 - 屏幕尺寸小于 600px 时，两列布局改为上下布局 */
+@media screen and (max-width: 800px) {
+  .leftcolumn, .rightcolumn {   
+    width: 100%;
+    padding: 0;
+  }
+}
+ 
+/* 响应式布局 -屏幕尺寸小于 400px 时，导航等布局改为上下布局 */
+@media screen and (max-width: 400px) {
+  .topnav a {
+    float: none;
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
 
+<div class="header">
+  <h1>我的网页</h1>
+  <p>重置浏览器大小查看效果。</p>
+</div>
 
-  
-</html>
+<div class="topnav">
+  <a href="#">តំណភ្ជាប់链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#" style="float:right">链接</a>
+</div>
 
-<html lang="zh-CN">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>北京健康管理中心</title>
-    <meta name="description" content="Re01。" />
-    <link rel="icon" href="/favicon.ico" />
-    <link rel="manifest" href="/manifest.json" />
-    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <meta name="msapplication-TileColor" content="#da532c" />
-    <meta name="theme-color" content="ffffff" />
-
-    <style>
-      body {
-        margin: 0;
-        /* vh 是view height 既视窗高度的意思，100就是100%占满窗口高度 */
-        height: 100vh;
-        background-color: #eee;
-      }
-      /* * {
-        border: 1px solid #333;
-      } */
-      .flex {
-        display: flex;
-      }
-      /* 占满比例 */
-      .flex1 {
-        flex: 1;
-      }
-      /* 竖向 */
-      .column {
-        flex-direction: column;
-      }
-      /* 阴影 */
-      .yinYing {
-        box-shadow: rgb(0 0 0 / 20%) 0px 2px 1px -1px,
-          rgb(0 0 0 / 14%) 0px 1px 1px 0px, rgb(0 0 0 / 12%) 0px 1px 3px 0px;
-      }
-      /* 白色背景 */
-      .baiSe {
-        background-color: #F0F8FF;
-      }
-      /* 上下左右外边距 */
-      .mg8 {
-        margin: 8px;
-      }
-      /* 右外边距 */
-      .mgr8 {
-        margin-right: 8px;
-      }
-      /* 上外边距 */
-      .mgt8 {
-        margin-top: 8px;
-      }
-      /* 四个小盒子 */
-      .shuJu {
-        height: 100px;
-      }
-      /* 中间的大盒子 */
-      .lieBiaoXiang {
-        height: 360px;
-      }
-      /* 导航条 */
-      .daoHang {
-        padding: 10px 20px;
-        border-bottom: 1px solid rgb(201, 201, 201);
-        font-size: 25px;
-        color: red;
-      }
-      .neiRong::-webkit-scrollbar {
-        display: none; /* Chrome Safari */
-      }
-
-      /* 当屏幕宽度小于600px时要改变的css */
-      @media (max-width: 600px) {
-        /* 小屏幕上取消侧边栏，后面学js时会教怎么弹出 */
-        .ceBian {
-          display: none;
-        }
-        /* 内容栏和数据栏flex方向改为竖向 */
-        .neiRong {
-          flex-direction: column;
-        }
-        .shuJuQu {
-          flex-direction: column;
-        }
-        /* 右区加左外边距 */
-        .youQu {
-          margin-left: 8px;
-        }
-        /* 数据块外边距，大小改为自动宽高 */
-        .shuJu {
-          margin: 0 0 8px;
-          flex: auto;
-        }
-      }
-    </style>
-    
-  </head>
-  <body class="flex">
-    <!-- 侧边栏 -->
-    <div
-      style="width: 200px; z-index: 3"
-      class="ceBian flex column baiSe yinYing"
-    >
-      <!-- 侧边头像栏 -->
-      <div
-        style="
-          padding: 10px;
-          align-items: center;
-          justify-content: center;
-          border-bottom: 1px solid #999;
-        "
-        class="flex"
-      >
-        <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-        <div style="margin-left: 10px"></div>
-      </div>
-      <!-- 导航栏 -->
-      <div class="flex1">
-        <div class="daoHang">អូទីស្សឹម</div>
-        <div class="daoHang">ជំងឺដាច់សរសៃឈាមខួរក្បាល</div>
-        <div class="daoHang">ភាពគ្មានកូន</div>
-        <div class="daoHang">spondylosis មាត់ស្បូន</div>
-        <div class="daoHang">ឈឺខ្នងនិងជើងទាប</div>
-      </div>
+<div class="row">
+  <div class="leftcolumn">
+    <div class="card">
+      <h2>文章标题</h2>
+      <h5>2019 年 4 月 17日</h5>
+      <div class="fakeimg" style="height:200px;">图片</div>
+      <p>一些文本...</p>
+      <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
-    <!-- 主区域 -->
-    <div class="flex flex1 column">
-      <!-- 头部栏 -->
-      <div style="height: 100px; z-index: 2" class="baiSe yinYing">
- <img
-          alt="logo"
-          src="./images-2/0001.png"
-          width="800px"
-          height="100px"
-        />
-        这里是头部栏吗មជ្ឈមណ្ឌលថែរភ្សាសុខភាពប៉េកាំង
-      </div>
-      <!-- 内容区 -->
-      <div class="flex flex1 neiRong" style="overflow: auto">
-        <!-- 左区 -->
-        <div style="flex: 3" class="flex column mg8">
-          <!-- 数据区 -->
-          
-          <div class="flex shuJuQu">
-
-            <!-- 四个小块显示重点数据 -->
-            <div class="shuJu baiSe yinYing flex1 mgr8">
-               <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-              金边金边金边
-            </div>
-            <div class="shuJu baiSe yinYing flex1 mgr8">
-              <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />暹粒暹粒暹粒
-            </div>
-            <div class="shuJu baiSe yinYing flex1 mgr8">
-              <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-              木牌木牌木牌
-            </div>
-            <div class="shuJu baiSe yinYing flex1">
-              西港西港西港
-              <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-            </div>
-          </div>
-          <!-- 列表区，列表数据可以无限增加 -->
-          <div class="flex column">
-            <!-- 列表项 -->
-            <div class="lieBiaoXiang mgt8 baiSe yinYing">
-              <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />东方红-这里可以加数据吗
-              ជំងឺ Autism Spectrum Disorder (ASD) គឺជាសំណុំនៃពិការភាពក្នុងការអភិវឌ្ឍន៍ដែលប៉ះពាល់ដល់សមត្ថភាពក្នុងសង្គម 
-              និងការប្រាស្រ័យទាក់ទងរបស់មនុស្ស។ ជំងឺវិកលចរិតនេះជួនកាលអាចរកឃើញមុនអាយុមួយឆ្នាំ 
-              ប៉ុន្តែជាធម្មតាមិនត្រូវបានគេធ្វើរោគវិនិច្ឆ័យឃើញទេរហូតដល់ច្រើនក្រោយមក។ 
-              កុមារភាគច្រើនដែលមានជំងឺអូទីសឹមត្រូវបានគេធ្វើរោគវិនិច្ឆ័យឃើញបន្ទាប់ពីអាយុ 3 ឆ្នាំ។ហើយក្នុងករណីខ្លះ 
-              វាត្រូវបានគេធ្វើរោគវិនិច្ឆ័យឃើញនៅអាយុ 18 ខែ។ អន្តរាគមន៍ដំបូងគឺជាសកម្មភាពដ៏មានប្រសិទ្ធភាពបំផុត 
-              ដូច្នេះនៅពេលដែលរោគសញ្ញានៃជំងឺអូទីស្សឹមលេចឡើងចំពោះកុមារដែលមានអាយុពី 2 ទៅ 3 ឆ្នាំ ពួកគេគួរតែត្រូវបានវាយតម្លៃដោយអ្នកជំនាញ។
-            </div>
-            <div class="lieBiaoXiang mgt8 baiSe yinYing">
-            <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-              这里是北京
-            </div>
-            <div class="lieBiaoXiang mgt8 baiSe yinYing">
-            <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-              \<a href="1012.html" target=_blank name="锚的名称" title="">这里是南京\</a>
-
-              这里是南京
-            </div>
-            <div class="lieBiaoXiang mgt8 baiSe yinYing">
-            <img
-          alt="logo"
-          src="./01.jpg"
-          width="150px"
-          height="150px"
-        />
-              这里是美国សុខភាព, ជំងឺនិងលក្ខខណ្ឌ
-           
-            </div>
-       
-          </div>
-        </div>
-      
-        </div>
-        
-      </div>
+    <div class="card">
+      <h2>文章标题</h2>
+      <h5>2019 年 4 月 17日</h5>
+      <div class="fakeimg" style="height:200px;">图片</div>
+      <p>一些文本...</p>
+      <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
-    
-  </body>
+  </div>
+  <div class="rightcolumn">
+    <div class="card">
+      <h2>关于我</h2>
+      <div class="fakeimg" style="height:100px;">图片</div>
+      <p>关于我的一些信息..</p>
+    </div>
+    <div class="card">
+      <h3>热门文章</h3>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p>图片</p></div>
+    </div>
+    <div class="card">
+      <h3>关注我</h3>
+      <p>一些文本...</p>
+    </div>
+  </div>
+</div>
+
+<div class="footer">
+  <h2>底部区域</h2>
+</div>
+
+</body>
 </html>
