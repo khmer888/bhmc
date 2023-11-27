@@ -1,36 +1,38 @@
 <!DOCTYPE html>
+<html lang="zh-CN"></html>
 <html>
+ 
 <head>
 <meta charset="utf-8">
-<title>北京健康管理中心</title>
+<title>菜鸟教程(runoob.com)</title>
 <style>
+ 
 * {
   box-sizing: border-box;
-}
  
+}
+
 body {
   font-family: Arial;
   padding: 10px;
-  background: #F5F5DC;
+  background: #f1f1f1;
 }
- 
+
 /* 头部标题 */
 .header {
-  padding: 20px;
- 
-  background: white;
-
+  padding: 30px;
+  text-align: center;
+  background: #FFFF66;
 }
  
 .header h1 {
   font-size: 50px;
-  color: #DC143C;
 }
  
 /* 导航条 */
 .topnav {
   overflow: hidden;
-  background-color: #F08080;
+  background-color: #c35252;
 }
  
 /* 导航条链接 */
@@ -45,24 +47,10 @@ body {
  
 /* 链接颜色修改 */
 .topnav a:hover {
-  background-color: #F5F5DC;
+  background-color: #ddd;
   color: black;
 }
- 
-/* 创建两列 */
-/* Left column */
-.leftcolumn {   
-  float: left;
-  width: 75%;
-}
- 
-/* 右侧栏 */
-.rightcolumn {
-  float: left;
-  width: 25%;
-  background-color: #f1f1f1;
-  padding-left: 20px;
-}
+
  
 /* 图像部分 */
 .fakeimg {
@@ -89,11 +77,11 @@ body {
 .footer {
   padding: 20px;
   text-align: center;
-  background: #F08080;
+  background: #ddd;
   margin-top: 20px;
 }
  
-/* 响应式布局 - 屏幕尺寸小于 600px 时，两列布局改为上下布局 */
+/* 响应式布局 - 屏幕尺寸小于 800px 时，两列布局改为上下布局 */
 @media screen and (max-width: 800px) {
   .leftcolumn, .rightcolumn {   
     width: 100%;
@@ -110,30 +98,33 @@ body {
 }
 </style>
 </head>
+
 <body>
-
+  
 <div class="header">
-  <h1>KHMER DOCTOR</h1>
-
-   </p>
-
-<img src="./01.jpg" width="200" height="200"></p>
+  <h1>មជ្ឈមណ្ឌលថែរភ្សាសុខភាពប៉េកាំង你的网页</h1>
+  <img  src="./jys01.jpg" width="100px" height="80px" />
+  <img  src="./01.jpg" width="100px" height="80px" />
+ <p> <img  src="./jys02.jpg" width="100px" height="80px" /></p>
  
+ 
+  <p>重置浏览器大小查看效果。</p>
+  <div>
+    <p>段落 1。 在 div 中。</p>
+    <p>段落 2。 在 div 中。</p>
+    </div>
 
 </div>
 
 <div class="topnav">
-  <a href="#">តំណភ្ជាប់链接</a>
-   <a href="#">តំណភ្ជាប់链接</a>
-   <a href="#">តំណភ្ជាប់链接</a>
-   <a href="#">តំណភ្ជាប់链接</a>
-   <a href="#">តំណភ្ជាប់链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
+  <a href="#">链接</a>
   <a href="#">链接</a>
   <a href="#">链接</a>
   <a href="#" style="float:right">链接</a>
-<a href="#" style="float:right">链接</a>
-<a href="#" style="float:right">链接</a>
- <a href="#" style="float:right">链接</a> 
 </div>
 
 <div class="row">
@@ -141,7 +132,11 @@ body {
     <div class="card">
       <h2>文章标题</h2>
       <h5>2019 年 4 月 17日</h5>
-      <div class="fakeimg" style="height:200px;">图片</div>
+      <div class="fakeimg" 
+      <img  src="./jys01.jpg" width="150px" height="80px" />
+      <img  src="./jys01.jpg" width="150px" height="80px" />
+      <img  src="./jys01.jpg" width="150px" height="80px" />
+      style="height:200px;">图片</div>
       <p>一些文本...</p>
       <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
@@ -152,6 +147,17 @@ body {
       <p>一些文本...</p>
       <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
     </div>
+
+    <div class="card">
+        <h2>文章标题</h2>
+        <h5>2019 年 4 月 17日</h5>
+        <div class="fakeimg" style="height:200px;">图片</div>
+        <p>一些文本...</p>
+        <p>菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！菜鸟教程 - 学的不仅是技术，更是梦想！</p>
+      </div>
+
+
+
   </div>
   <div class="rightcolumn">
     <div class="card">
@@ -161,11 +167,16 @@ body {
     </div>
     <div class="card">
       <h3>热门文章</h3>
-      <div class="fakeimg"><p>图片</p></div>
-      <div class="fakeimg"><p>图片</p></div>
+      <div class="fakeimg"><p> 
+        <img  src="./jys01.jpg" width="150px" height="80px" />
+        <img  src="./01.jpg" width="150px" height="180px" />
+        <img  src="./jys02.jpg" width="150px" height="180px" />图片</p></div>
+      <div class="fakeimg"><p>图片 
+        <img  src="./jys01.jpg" width="150px" height="80px" />
+    </p></div>
       <div class="fakeimg"><p>图片</p></div>
     </div>
-    <div class="card">
+    <div class="card"> 
       <h3>关注我</h3>
       <p>一些文本...</p>
     </div>
@@ -173,8 +184,7 @@ body {
 </div>
 
 <div class="footer">
-  <h2>地址：
-  联络电话：        TELEGRAM:    </h2>
+  <h2>底部区域</h2>
 </div>
 
 </body>
